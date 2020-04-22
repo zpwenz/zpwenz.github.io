@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstrap Visualization Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+  <!--CSS Link-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" style="background-color: #0BADA6;" href="index.html">Twitter and Stocks</a>
+      <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Apple.html">Apple</a>
+              <a class="dropdown-item" href="Google.html">Google</a>
+              <a class="dropdown-item" href="Nike.html">Nike</a>
+              <a class="dropdown-item" href="Disney.html">Disney</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparisons.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+      </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Content Section -->
+  <div class="container">
+    <div class="box">
+      <h3 class="title">Data</h3>
+      <hr>
+      <p>The data used for this project is displayed in the following table</p>
+      <br>
+      <div class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+</div>
+
+<table class="table table-bordered table-hover table-condensed">
+  <thead><tr><th title="Field #1">RANK</th>
+  <th title="Field #2">COMPANY</th>
+  <th title="Field #3">SYMBOL</th>
+  <th title="Field #4">REVENUES($M)</th>
+  <th title="Field #5">WEBSITE</th>
+  <th title="Field #6">Twitter Handle</th>
+  <th title="Field #7">Industry</th>
+  </tr></thead>
+  <tbody><tr>
+  <td align="right">1</td>
+  <td>Walmart</td>
+  <td>WMT</td>
+  <td align="right">482130</td>
+  <td>www.walmart.com</td>
+  <td>walmart</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">2</td>
+  <td>Exxon Mobil</td>
+  <td>XOM</td>
+  <td align="right">246204</td>
+  <td>www.exxonmobil.com</td>
+  <td>exxonmobil</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">3</td>
+  <td>Apple</td>
+  <td>APPL</td>
+  <td align="right">233715</td>
+  <td>www.apple.com</td>
+  <td>Apple</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">4</td>
+  <td>Berkshire Hathaway</td>
+  <td>BRK.B</td>
+  <td align="right">210821</td>
+  <td>www.berkshirehathaway.com</td>
+  <td>BHHSRealEstate</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">5</td>
+  <td>McKesson</td>
+  <td>MCK</td>
+  <td align="right">181241</td>
+  <td>www.mckesson.com</td>
+  <td>McKesson</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">6</td>
+  <td>UnitedHealth Group</td>
+  <td>UNH</td>
+  <td align="right">157107</td>
+  <td>www.unitedhealthgroup.com</td>
+  <td>UnitedHealthGrp</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">7</td>
+  <td>CVS Health</td>
+  <td>CVS</td>
+  <td align="right">153290</td>
+  <td>www.cvshealth.com</td>
+  <td>CVSHealth</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">8</td>
+  <td>General Motors</td>
+  <td>GM</td>
+  <td align="right">152356</td>
+  <td>www.gm.com</td>
+  <td>GM</td>
+  <td>Motor Vehicle and Parts</td>
+  </tr>
+  <tr>
+  <td align="right">9</td>
+  <td>Ford Motor</td>
+  <td>F</td>
+  <td align="right">149558</td>
+  <td>www.ford.com</td>
+  <td>Ford</td>
+  <td>Motor Vehicle and Parts</td>
+  </tr>
+  <tr>
+  <td align="right">10</td>
+  <td>AT&amp;T</td>
+  <td>T</td>
+  <td align="right">146801</td>
+  <td>www.att.com</td>
+  <td>ATT</td>
+  <td>Telecommunications</td>
+  </tr>
+  <tr>
+  <td align="right">11</td>
+  <td>General Electric</td>
+  <td>GE</td>
+  <td align="right">140389</td>
+  <td>www.ge.com</td>
+  <td>generalelectric</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">12</td>
+  <td>AmerisourceBergen</td>
+  <td>ABC</td>
+  <td align="right">135962</td>
+  <td>www.amerisourcebergen.com</td>
+  <td>Healthcare_ABC</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">13</td>
+  <td>Verizon</td>
+  <td>VZ</td>
+  <td align="right">131620</td>
+  <td>www.verizon.com</td>
+  <td>verizon</td>
+  <td>Telecommunications</td>
+  </tr>
+  <tr>
+  <td align="right">14</td>
+  <td>Chevron</td>
+  <td>CVX</td>
+  <td align="right">131118</td>
+  <td>www.chevron.com</td>
+  <td>Chevron</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">15</td>
+  <td>Costco</td>
+  <td>COST</td>
+  <td align="right">116199</td>
+  <td>www.costco.com</td>
+  <td>Costco</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">16</td>
+  <td>Fannie Mae</td>
+  <td>FNMA</td>
+  <td align="right">110359</td>
+  <td>www.fanniemae.com</td>
+  <td>FannieMae</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">17</td>
+  <td>Kroger</td>
+  <td>KR</td>
+  <td align="right">109830</td>
+  <td>www.thekrogerco.com</td>
+  <td>Kroeger</td>
+  <td>Food and Drugs</td>
+  </tr>
+  <tr>
+  <td align="right">18</td>
+  <td>Amazon.com</td>
+  <td>AMZN</td>
+  <td align="right">107006</td>
+  <td>www.amazon.com</td>
+  <td>amazon</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">19</td>
+  <td>Walgreens</td>
+  <td>WAG</td>
+  <td align="right">103444</td>
+  <td>www.walgreensbootsalliance.com</td>
+  <td>Walgreens</td>
+  <td>Food and Drugs</td>
+  </tr>
+  <tr>
+  <td align="right">20</td>
+  <td>HP</td>
+  <td>HPQ</td>
+  <td align="right">103355</td>
+  <td>www.hp.com</td>
+  <td>HP</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">21</td>
+  <td>Cardinal Health</td>
+  <td>CAH</td>
+  <td align="right">102531</td>
+  <td>www.cardinal.com</td>
+  <td>cardinalhealth</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">22</td>
+  <td>Express Scripts Holding</td>
+  <td>ESRX</td>
+  <td align="right">101752</td>
+  <td>www.express-scripts.com</td>
+  <td>ExpressScripts</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">23</td>
+  <td>J.P. Morgan Chase</td>
+  <td>JPM</td>
+  <td align="right">101006</td>
+  <td>www.jpmorganchase.com</td>
+  <td>jpmorgan</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">24</td>
+  <td>Boeing</td>
+  <td>BA</td>
+  <td align="right">96114</td>
+  <td>www.boeing.com</td>
+  <td>Boeing</td>
+  <td>AeroSpace and Defense</td>
+  </tr>
+  <tr>
+  <td align="right">25</td>
+  <td>Microsoft</td>
+  <td>MSFT</td>
+  <td align="right">93580</td>
+  <td>www.microsoft.com</td>
+  <td>Microsoft</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">26</td>
+  <td>Bank of America Corp.</td>
+  <td>BAC</td>
+  <td align="right">93056</td>
+  <td>www.bankofamerica.com</td>
+  <td>BankofAmerica</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">27</td>
+  <td>Wells Fargo</td>
+  <td>WFC</td>
+  <td align="right">90033</td>
+  <td>www.wellsfargo.com</td>
+  <td>WellsFargo</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">28</td>
+  <td>Home Depot</td>
+  <td>HD</td>
+  <td align="right">88519</td>
+  <td>www.homedepot.com</td>
+  <td>HomeDepot</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">29</td>
+  <td>Citigroup</td>
+  <td>C</td>
+  <td align="right">88275</td>
+  <td>www.citigroup.com</td>
+  <td>Citi</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">30</td>
+  <td>Phillips 66</td>
+  <td>PSX</td>
+  <td align="right">87169</td>
+  <td>www.phillips66.com</td>
+  <td>Phillips66Co</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">31</td>
+  <td>IBM</td>
+  <td>IBM</td>
+  <td align="right">82461</td>
+  <td>www.ibm.com</td>
+  <td>IBM</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">32</td>
+  <td>Valero Energy</td>
+  <td>VLO</td>
+  <td align="right">81824</td>
+  <td>www.valero.com</td>
+  <td>ValeroEnergy</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">33</td>
+  <td>Anthem</td>
+  <td>ANTM</td>
+  <td align="right">79157</td>
+  <td>www.antheminc.com</td>
+  <td>AnthemInc</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">34</td>
+  <td>Procter &amp; Gamble</td>
+  <td>PG</td>
+  <td align="right">78756</td>
+  <td>www.pg.com</td>
+  <td>ProcterGamble</td>
+  <td>Household Products</td>
+  </tr>
+  <tr>
+  <td align="right">35</td>
+  <td>State Farm Insurance Cos.</td>
+  <td>STFGX</td>
+  <td align="right">75697</td>
+  <td>www.statefarm.com</td>
+  <td>StateFarm</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">36</td>
+  <td>Alphabet</td>
+  <td>GOOGL</td>
+  <td align="right">74989</td>
+  <td>www.google.com</td>
+  <td>google</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">37</td>
+  <td>Comcast</td>
+  <td>CMCSA</td>
+  <td align="right">74510</td>
+  <td>www.comcastcorporation.com</td>
+  <td>comcast</td>
+  <td>Telecommunications</td>
+  </tr>
+  <tr>
+  <td align="right">38</td>
+  <td>Target</td>
+  <td>TGT</td>
+  <td align="right">73785</td>
+  <td>www.target.com</td>
+  <td>Target</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">39</td>
+  <td>Johnson &amp; Johnson</td>
+  <td>JNJ</td>
+  <td align="right">70074</td>
+  <td>www.jnj.com</td>
+  <td>JNJNews</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">40</td>
+  <td>MetLife</td>
+  <td>MET</td>
+  <td align="right">69951</td>
+  <td>www.metlife.com</td>
+  <td>MetLife</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">41</td>
+  <td>Archer Daniels Midland</td>
+  <td>ADM</td>
+  <td align="right">67702</td>
+  <td>www.adm.com</td>
+  <td>ADMupdates</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">42</td>
+  <td>Marathon Petroleum</td>
+  <td>MPC</td>
+  <td align="right">64566</td>
+  <td>www.marathonpetroleum.com</td>
+  <td>MarathonPetroCo</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">43</td>
+  <td>Freddie Mac</td>
+  <td>FMCC</td>
+  <td align="right">63491</td>
+  <td>www.freddiemac.com</td>
+  <td>FreddieMac</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">44</td>
+  <td>PepsiCo</td>
+  <td>PEP</td>
+  <td align="right">63056</td>
+  <td>www.pepsico.com</td>
+  <td>PepsiCo</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">45</td>
+  <td>United Technologies</td>
+  <td>UTX</td>
+  <td align="right">61047</td>
+  <td>www.utc.com</td>
+  <td>UTC</td>
+  <td>AeroSpace and Defense</td>
+  </tr>
+  <tr>
+  <td align="right">46</td>
+  <td>Aetna</td>
+  <td>AET</td>
+  <td align="right">60337</td>
+  <td>www.aetna.com</td>
+  <td>aetna</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">47</td>
+  <td>Lowe&#39;s</td>
+  <td>LOW</td>
+  <td align="right">59074</td>
+  <td>www.lowes.com</td>
+  <td>Lowes</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">48</td>
+  <td>UPS</td>
+  <td>UPS</td>
+  <td align="right">58363</td>
+  <td>www.ups.com</td>
+  <td>UPS</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">49</td>
+  <td>AIG</td>
+  <td>AIG</td>
+  <td align="right">58327</td>
+  <td>www.aig.com</td>
+  <td>AIGinsurance</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">50</td>
+  <td>Prudential Financial</td>
+  <td>PRU</td>
+  <td align="right">57119</td>
+  <td>www.prudential.com</td>
+  <td>Prudential</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">51</td>
+  <td>Intel</td>
+  <td>INTC</td>
+  <td align="right">55355</td>
+  <td>www.intel.com</td>
+  <td>intel</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">52</td>
+  <td>Humana</td>
+  <td>HUM</td>
+  <td align="right">54289</td>
+  <td>www.humana.com</td>
+  <td>Humana</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">53</td>
+  <td>Disney</td>
+  <td>DIS</td>
+  <td align="right">52465</td>
+  <td>www.disney.com</td>
+  <td>Disney</td>
+  <td>Media</td>
+  </tr>
+  <tr>
+  <td align="right">54</td>
+  <td>Cisco Systems</td>
+  <td>CSCO</td>
+  <td align="right">49161</td>
+  <td>www.cisco.com</td>
+  <td>Cisco</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">55</td>
+  <td>Pfizer</td>
+  <td>PFE</td>
+  <td align="right">48851</td>
+  <td>www.pfizer.com</td>
+  <td>pfizer</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">56</td>
+  <td>Dow Chemical</td>
+  <td>DOW</td>
+  <td align="right">48778</td>
+  <td>www.dow.com</td>
+  <td>DowChemical</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">57</td>
+  <td>Sysco</td>
+  <td>SYY</td>
+  <td align="right">48681</td>
+  <td>www.sysco.com</td>
+  <td>Sysco</td>
+  <td>Wholesalers</td>
+  </tr>
+  <tr>
+  <td align="right">58</td>
+  <td>FedEx</td>
+  <td>FDX</td>
+  <td align="right">47453</td>
+  <td>www.fedex.com</td>
+  <td>FedEx</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">59</td>
+  <td>Caterpillar</td>
+  <td>CAT</td>
+  <td align="right">47011</td>
+  <td>www.caterpillar.com</td>
+  <td>CaterpillarInc</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">60</td>
+  <td>Lockheed Martin</td>
+  <td>LMT</td>
+  <td align="right">46132</td>
+  <td>www.lockheedmartin.com</td>
+  <td>LockheedMartin</td>
+  <td>AeroSpace and Defense</td>
+  </tr>
+  <tr>
+  <td align="right">61</td>
+  <td>Coca-Cola</td>
+  <td>KO</td>
+  <td align="right">44294</td>
+  <td>www.coca-colacompany.com</td>
+  <td>CocaCola</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">62</td>
+  <td>HCA Holdings</td>
+  <td>HCA</td>
+  <td align="right">43591</td>
+  <td>www.hcahealthcare.com</td>
+  <td>HCAhealthcare</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">63</td>
+  <td>Ingram Micro</td>
+  <td>IM</td>
+  <td align="right">43026</td>
+  <td>www.ingrammicro.com</td>
+  <td>IngramMicroInc</td>
+  <td>Wholesalers</td>
+  </tr>
+  <tr>
+  <td align="right">64</td>
+  <td>Energy Transfer Equity</td>
+  <td>ETE</td>
+  <td align="right">42126</td>
+  <td>www.energytransfer.com</td>
+  <td>EnergyTransfer</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">65</td>
+  <td>Tyson Foods</td>
+  <td>TSN</td>
+  <td align="right">41373</td>
+  <td>www.tysonfoods.com</td>
+  <td>TysonFoods</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">66</td>
+  <td>American Airlines Group</td>
+  <td>AAL</td>
+  <td align="right">40990</td>
+  <td>www.aa.com</td>
+  <td>AmericanAir</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">67</td>
+  <td>Delta Air Lines</td>
+  <td>DAL</td>
+  <td align="right">40704</td>
+  <td>www.delta.com</td>
+  <td>Delta</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">68</td>
+  <td>Nationwide</td>
+  <td>NFS</td>
+  <td align="right">40222</td>
+  <td>www.nationwide.com</td>
+  <td>Nationwide</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">69</td>
+  <td>Johnson Controls</td>
+  <td>JCI</td>
+  <td align="right">40204</td>
+  <td>www.johnsoncontrols.com</td>
+  <td>johnsoncontrols</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">70</td>
+  <td>Best Buy</td>
+  <td>BBY</td>
+  <td align="right">39745</td>
+  <td>www.bestbuy.com</td>
+  <td>BestBuy</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">71</td>
+  <td>Merck</td>
+  <td>MRK</td>
+  <td align="right">39498</td>
+  <td>www.merck.com</td>
+  <td>Merck</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">72</td>
+  <td>Goldman Sachs Group</td>
+  <td>GS</td>
+  <td align="right">39208</td>
+  <td>www.gs.com</td>
+  <td>GoldmanSachs</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">73</td>
+  <td>Honeywell International</td>
+  <td>HON</td>
+  <td align="right">38581</td>
+  <td>www.honeywell.com</td>
+  <td>honeywell</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">74</td>
+  <td>Oracle</td>
+  <td>ORCL</td>
+  <td align="right">38226</td>
+  <td>www.oracle.com</td>
+  <td>Oracle</td>
+  <td>Technology</td>
+  </tr>
+  <tr>
+  <td align="right">75</td>
+  <td>Morgan Stanley</td>
+  <td>MS</td>
+  <td align="right">37897</td>
+  <td>www.morganstanley.com</td>
+  <td>MorganStanley</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">76</td>
+  <td>Cigna</td>
+  <td>CI</td>
+  <td align="right">37876</td>
+  <td>www.cigna.com</td>
+  <td>Cigna</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">77</td>
+  <td>United Continental Holdings</td>
+  <td>UAL</td>
+  <td align="right">37864</td>
+  <td>www.unitedcontinentalholdings.com</td>
+  <td>united</td>
+  <td>Transportation</td>
+  </tr>
+  <tr>
+  <td align="right">78</td>
+  <td>Allstate</td>
+  <td>ALL</td>
+  <td align="right">35653</td>
+  <td>www.allstate.com</td>
+  <td>allstate</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">79</td>
+  <td>TIAA</td>
+  <td>TIBLX</td>
+  <td align="right">35181</td>
+  <td>www.tiaa.org</td>
+  <td>TIAA</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">80</td>
+  <td>INTL FCStone</td>
+  <td>INTL</td>
+  <td align="right">34693</td>
+  <td>www.intlfcstone.com</td>
+  <td>INTLFCStone</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">81</td>
+  <td>CHS</td>
+  <td>CHS</td>
+  <td align="right">34582</td>
+  <td>www.chsinc.com</td>
+  <td>CHSAgServices</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">82</td>
+  <td>American Express</td>
+  <td>AXP</td>
+  <td align="right">34441</td>
+  <td>www.americanexpress.com</td>
+  <td>americanexpress</td>
+  <td>Financials</td>
+  </tr>
+  <tr>
+  <td align="right">83</td>
+  <td>Gilead Sciences</td>
+  <td>GILD</td>
+  <td align="right">32639</td>
+  <td>www.gilead.com</td>
+  <td>GileadSciences</td>
+  <td>Health Care</td>
+  </tr>
+  <tr>
+  <td align="right">84</td>
+  <td>General Dynamics</td>
+  <td>GD</td>
+  <td align="right">31469</td>
+  <td>www.generaldynamics.com</td>
+  <td>GDMS</td>
+  <td>AeroSpace and Defense</td>
+  </tr>
+  <tr>
+  <td align="right">85</td>
+  <td>TJX</td>
+  <td>TJX</td>
+  <td align="right">30945</td>
+  <td>www.tjx.com</td>
+  <td>tjmaxx</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">86</td>
+  <td>ConocoPhillips</td>
+  <td>COP</td>
+  <td align="right">30935</td>
+  <td>www.conocophillips.com</td>
+  <td>conocophillips</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">87</td>
+  <td>Nike</td>
+  <td>NKE</td>
+  <td align="right">30601</td>
+  <td>www.nike.com</td>
+  <td>Nike</td>
+  <td>Retail</td>
+  </tr>
+  <tr>
+  <td align="right">88</td>
+  <td>World Fuel Services</td>
+  <td>INT</td>
+  <td align="right">30380</td>
+  <td>www.wfscorp.com</td>
+  <td>wfscorp</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">89</td>
+  <td>3M</td>
+  <td>MMM</td>
+  <td align="right">30274</td>
+  <td>www.3m.com</td>
+  <td>3M</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">90</td>
+  <td>Mondelez International</td>
+  <td>MDLZ</td>
+  <td align="right">29636</td>
+  <td>www.mondelezinternational.com</td>
+  <td>MDLZ</td>
+  <td>Food and Beverage</td>
+  </tr>
+  <tr>
+  <td align="right">91</td>
+  <td>Exelon</td>
+  <td>EXC</td>
+  <td align="right">29447</td>
+  <td>www.exeloncorp.com</td>
+  <td>Excelon</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">92</td>
+  <td>Twenty-First Century Fox</td>
+  <td>FOXA</td>
+  <td align="right">28987</td>
+  <td>www.21cf.com</td>
+  <td>21CF</td>
+  <td>Media</td>
+  </tr>
+  <tr>
+  <td align="right">93</td>
+  <td>Deere</td>
+  <td>DE</td>
+  <td align="right">28863</td>
+  <td>www.johndeere.com</td>
+  <td>JohnDeere</td>
+  <td>Industrials</td>
+  </tr>
+  <tr>
+  <td align="right">94</td>
+  <td>Tesoro</td>
+  <td>TSO</td>
+  <td align="right">28150</td>
+  <td>www.tsocorp.com</td>
+  <td>tesorotec</td>
+  <td>Energy</td>
+  </tr>
+  <tr>
+  <td align="right">95</td>
+  <td>Time Warner</td>
+  <td>TWX</td>
+  <td align="right">28118</td>
+  <td>www.timewarner.com</td>
+  <td>WarnerMediaGrp</td>
+  <td>Media</td>
+  </tr>
+  </tbody></table>
+
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">&copy; Copyright Coding Bootcamp 2019</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
